@@ -29,7 +29,9 @@ program huertaDeToni {
 	 * De yapa, mostramos cómo agregar varios objetos de una utilizando
 	 * un rango (1..13), que equivale a la lista [1, 2, 3, ..., 13].
 	 */
-	(1..13).forEach { x => game.addVisualIn(new Maiz(), game.at(x, 5)) }
-		
+	(1..13).forEach { x => game.addVisual(new Maiz(position = game.at(x, 5))) }
+	
+	toni.configuracion()
+	
 	game.start()
 }
